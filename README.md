@@ -1,6 +1,31 @@
-frontend-nanodegree-arcade-game
-===============================
+# Memory Game
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+This game will put your hand and eye coordinatin skills to the test.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+<hr>
+
+![Classic Arcade Game](images/classic-arcade-game.png)
+
+<hr>
+
+## Goal
+The goal of the game is to cross our player boy safely to the top without colliding from any marauding bug.
+
+## Try it
+
+[https://jprime81.github.io/classic-arcade-game/](https://jprime81.github.io/classic-arcade-game/)
+
+## Mechanics
+
+- Use your keyboard's arrow key to move up, down, left, and right
+
+- Avoid the wandering and speeding bugs to reach the top and score
+
+- Score is tallied when you reach the top
+
+- Score is reset once all lives are spent
+
+## References
+
+- This game was
+
