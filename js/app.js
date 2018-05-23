@@ -4,15 +4,15 @@ const maximumY = 380;
 const topArea = 0;
 
 // Select page body
-let pageBody = document.querySelector('body');
+const pageBody = document.querySelector('body');
 
 // Enemies our player must avoid
-let Enemy = function(x, y, speed) {
+let Enemy = function(x, y) {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
     this.x = x;
     this.y = y;
-    this.speed = speed;
+    this.speed = 150 + Math.floor(Math.random() * 600);
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
@@ -68,10 +68,10 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-let Player = function (x, y, speed) {
-    this.x = x;
-    this.y = y;
-    this.speed = speed;
+let Player = function () {
+    this.x = 200;
+    this.y = 380;
+    this.speed = 50;
     this.score = 0;
     this.collisionCounter = 0;
     this.sprite = 'images/char-boy.png';
@@ -135,12 +135,14 @@ Player.prototype.handleInput = function (keyPress) {
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 let allEnemies = [];
-let player = new Player(200, 380, 50);
-let enemyPosition = [60, 140, 220];
+let player = new Player();
 
-// Loops through enemyPosition, creates new enemy with random speed and position, and adds new enemy to allEnemies array
-enemyPosition.forEach(function (position) {
-    let enemy = new Enemy(0, position, 150 + Math.floor(Math.random() * 600));
+// Number of enemies and their position on the canvas
+let enemies = [45, 130, 200, 290];
+
+// Loops through all enemies, creates new enemy with random speed and position, and adds new enemy to allEnemies array
+enemies.forEach(function (position) {
+    let enemy = new Enemy(0, position);
     allEnemies.push(enemy);
 });
 

@@ -99,7 +99,8 @@ var Engine = (function(global) {
 
         // Prints score to selected element
         doc.getElementById('score').innerHTML = player.score;
-         // Prints remaining attempts to selected element
+
+        // Prints remaining attempts to selected element
         doc.getElementById('attempts').innerHTML = allowedAttemps - player.collisionCounter;
     }
 
