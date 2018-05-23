@@ -25,7 +25,3 @@ The goal of the game is to cross our player boy safely to the top without collid
 
 - Score is reset once all lives are spent
 
-## References
-
-- This game was
-
