@@ -1,7 +1,12 @@
+// The game's code is heavily influenced from this github repo: https://github.com/brenopolanski/udacity-classic-arcade-game-clone/blob/master/js/app.js
+
+// Improvements, such as code refactor, and other features are my own based on how I understood the requirements
+
 // Canvas allowed max area
 const maximumX = 400;
 const maximumY = 380;
 const topArea = 0;
+const delay = 500;
 
 // Select page body
 const pageBody = document.querySelector('body');
@@ -45,7 +50,7 @@ Enemy.prototype.update = function(dt) {
         // Set timeout to return page body background color to white
         setTimeout(function () {
             pageBody.style.backgroundColor = 'white';
-        }, 200);
+        }, delay);
 
         // Player is allowed to make three mistakes before score is reset to zero
         if (player.collisionCounter === 3) {
@@ -104,7 +109,7 @@ Player.prototype.update = function () {
         // Set timeout to return page body background color to white
         setTimeout(function () {
             pageBody.style.backgroundColor = 'white';
-        }, 200);
+        }, delay);
     }
 };
 
