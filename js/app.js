@@ -1,3 +1,8 @@
+// Canvas allowed max area
+const maximumX = 400;
+const maximumY = 380;
+const topArea = 0;
+
 // Select page body
 let pageBody = document.querySelector('body');
 
@@ -75,18 +80,18 @@ let Player = function (x, y, speed) {
 Player.prototype.update = function () {
 
     // Prevent player from moving past canvas as its positions resets to allowed area
-    if (this.y > 380) {
+    if (this.y > maximumY) {
         this.y = 380;
     }
-    if (this.x > 400) {
+    if (this.x > maximumX) {
         this.x = 400;
     }
-    if (this.x < 0) {
+    if (this.x < topArea) {
         this.x = 0;
     }
 
     // Verify if the player reaches the top area
-    if (this.y < 0) {
+    if (this.y < topArea) {
         this.x = 200;
         this.y = 380;
 
